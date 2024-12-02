@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -10,21 +11,29 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #2d3e50;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
     font-family: 'Arial', sans-serif;
 }
-
+.text{
+    margin-bottom: -50px;
+    text-align: center;
+}
 .tree {
     position: relative;
     text-align: center;
 }
 
 .star {
-    font-size: 2rem;
+    font-size: 4rem;
     color: gold;
     position: relative;
     z-index: 10;
-    margin-bottom: -25px
+    margin-bottom: -40px;
+    text-shadow:
+    0 0 5px #fbff00b7,  /* inner white */
+    0 0 10px rgba(255, 252, 61, 0.884), /* middle magenta */
+    0 0 5cap rgb(235, 255, 123); /* outer cyan */
 }
 
 .layer {
@@ -35,23 +44,26 @@ body {
 }
 
 .layer1 {
+    z-index: 3; 
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 50px solid #28a745;
+    border-bottom: 50px solid green;
     margin-top: 10px;
 }
 
 .layer2 {
+    z-index: 2; 
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-bottom: 150px solid #28a745;
+    border-bottom: 150px solid green;
     margin-top: -20px;
 }
 
 .layer3 {
+    z-index: 1; 
     border-left: 200px solid transparent;
     border-right: 200px solid transparent;
-    border-bottom: 200px solid #28a745;
+    border-bottom: 200px solid green;
     margin-top: -30px;
 }
 
@@ -63,3 +75,674 @@ body {
     margin-top: -20px;
     border-radius: 4px;
 }
+
+.platform{
+    background: rgb(233, 239, 255);
+    margin: 0 auto;
+    border-radius: 500px;
+}
+.land1 {
+    width: 250px;
+    height: 10px;
+}
+.land2 {
+    width: 375px;
+    height: 20px;
+}
+.land3 {
+    width: 500px;
+    height: 30px;
+}
+.land4 {
+    width: 625px;
+    height: 40px;
+}
+.land5 {
+    width: 750px;
+    height: 50px;
+}
+.ball {
+    animation: blink 1s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    height: 0.5rem;
+    width: 0.5rem;
+    padding: 5px;
+    background: linear-gradient();
+}
+.red{
+    animation: blink-red 1s linear infinite;
+    animation-timing-function: ease-in-out;
+    background-color: rgb(214, 25, 25);
+    position: relative;
+    box-shadow:
+      0 0 5px 5px #ff0000,  /* inner white */
+      0 0 10px 10px rgb(255, 66, 66), /* middle magenta */
+      0 0 5cap 15px rgb(255, 123, 123); /* outer cyan */
+}
+.green{
+    animation: blink-green 1s linear infinite;
+    animation-timing-function: ease-in-out;
+    background-color: #1ace44;
+    position: relative;
+    animation-delay: 0.33s;
+    box-shadow:
+      0 0 5px 5px #00ff00,  /* inner white */
+      0 0 10px 10px rgb(59, 255, 85), /* middle magenta */
+      0 0 5cap 15px rgb(119, 255, 153); /* outer cyan */
+}
+.blue{
+    animation: blink-blue 1s linear infinite;
+    animation-timing-function: ease-in-out;
+    background-color: rgb(17, 20, 218);
+    position: relative;
+    animation-delay: 0.5s;
+    box-shadow:
+      0 0 5px 5px #1100ff,  /* inner white */
+      0 0 10px 10px rgb(75, 78, 255), /* middle magenta */
+      0 0 5cap 15px rgb(121, 130, 255); /* outer cyan */
+}
+  @keyframes blink-red {
+    25% {
+        opacity: 0.5;
+      }
+    50% {
+      opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+      }
+  }
+
+  @keyframes blink-green {
+    25% {
+        opacity: 0.5;
+      }
+    50% {
+      opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+      }
+  }
+
+  @keyframes blink-blue {
+    25% {
+        opacity: 0.5;
+      }
+    50% {
+      opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+      }
+  }
+
+  .blinking-text  {
+    animation: blink 1s linear infinite;
+    text-align: center;
+    font-weight: bold;    
+    font-size: 35px;
+    font-family: 'Mountains of Christmas';
+    filter: drop-shadow(0 0 10px white);
+  }
+  p{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Mountains of Christmas';
+    color: #ff0000;
+    text-shadow: 
+    0 0 10px #ff1d1d,  /* inner  */
+    0 0 30px #ff5151,  /* inner  */
+    0 0 50px #ff8e8e;  /* inner  */
+    animation: blink 1s linear infinite;
+    animation-delay: 0.5s;
+}
+  path {
+    fill: transparent;
+  }
+  
+  text {
+    fill: wHITE;
+  }
+
+
+  @keyframes blink {
+    25% {
+        opacity: 0.5;
+      }
+    50% {
+      opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+      }
+    }
+
+    /* SNOW */
+    .main {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#123, #111);
+        opacity: 0;
+        animation: main-loadup 1s forwards linear, main-loadup-bg 10s forwards linear;
+        animation-delay: 7s, 8s;
+    }
+    
+    @keyframes main-loadup {
+        from {
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes main-loadup-bg {
+        from {
+            background-size: 100% 100%;
+            background-position: 0% 0%;
+        }
+    
+        to {
+            background-size: 400% 400%;
+            background-position: 0% 100%;
+        }
+    }
+    
+    .initial-snow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .initial-snow > * {
+        font-size: 50px;
+        color: white;
+        position: absolute;
+        top: -5vh;
+    }
+    
+    @keyframes snowfall {
+        0% {
+            transform: translate3d(var(--left-ini), 0, 0);
+        }
+    
+        100% {
+            transform: translate3d(var(--left-end), 110vh, 0);
+        }
+    }
+    
+    .snow:nth-child(2n) {
+        filter: blur(1px);
+        font-size: 40px;
+    }
+    
+    .snow:nth-child(6n) {
+        filter: blur(2px);
+        font-size: 30px;
+    }
+    
+    .snow:nth-child(10n) {
+        filter: blur(5px);
+        font-size: 30px;
+    }
+    
+    .snow:nth-child(1) {
+        --size: 0.8vw;
+        --left-ini: 0vw;
+        --left-end: -1vw;
+        left: 70vw;
+        animation: snowfall 9s linear infinite;
+        animation-delay: -1s;
+    }
+    
+    .snow:nth-child(2) {
+        --size: 0.2vw;
+        --left-ini: -7vw;
+        --left-end: 10vw;
+        left: 65vw;
+        animation: snowfall 15s linear infinite;
+        animation-delay: -8s;
+    }
+    
+    .snow:nth-child(3) {
+        --size: 1vw;
+        --left-ini: 6vw;
+        --left-end: 6vw;
+        left: 1vw;
+        animation: snowfall 9s linear infinite;
+        animation-delay: -7s;
+    }
+    
+    .snow:nth-child(4) {
+        --size: 0.2vw;
+        --left-ini: -3vw;
+        --left-end: 9vw;
+        left: 88vw;
+        animation: snowfall 14s linear infinite;
+        animation-delay: -5s;
+    }
+    
+    .snow:nth-child(5) {
+        --size: 0.4vw;
+        --left-ini: -2vw;
+        --left-end: -9vw;
+        left: 74vw;
+        animation: snowfall 6s linear infinite;
+        animation-delay: -4s;
+    }
+    
+    .snow:nth-child(6) {
+        --size: 0.2vw;
+        --left-ini: 5vw;
+        --left-end: 1vw;
+        left: 35vw;
+        animation: snowfall 6s linear infinite;
+        animation-delay: -7s;
+    }
+    
+    .snow:nth-child(7) {
+        --size: 0.4vw;
+        --left-ini: -2vw;
+        --left-end: -1vw;
+        left: 27vw;
+        animation: snowfall 10s linear infinite;
+        animation-delay: -8s;
+    }
+    
+    .snow:nth-child(8) {
+        --size: 1vw;
+        --left-ini: -9vw;
+        --left-end: -2vw;
+        left: 69vw;
+        animation: snowfall 8s linear infinite;
+        animation-delay: -8s;
+    }
+    
+    .snow:nth-child(9) {
+        --size: 0.2vw;
+        --left-ini: -1vw;
+        --left-end: -5vw;
+        left: 84vw;
+        animation: snowfall 11s linear infinite;
+        animation-delay: -6s;
+    }
+    
+    .snow:nth-child(10) {
+        --size: 0.2vw;
+        --left-ini: 7vw;
+        --left-end: -9vw;
+        left: 82vw;
+        animation: snowfall 10s linear infinite;
+        animation-delay: -3s;
+    }
+    
+    .snow:nth-child(11) {
+        --size: 0.6vw;
+        --left-ini: -2vw;
+        --left-end: -1vw;
+        left: 48vw;
+        animation: snowfall 10s linear infinite;
+        animation-delay: -1s;
+    }
+    
+    .snow:nth-child(12) {
+        --size: 0.2vw;
+        --left-ini: 5vw;
+        --left-end: 6vw;
+        left: 39vw;
+        animation: snowfall 15s linear infinite;
+        animation-delay: -8s;
+    }
+    
+    .snow:nth-child(13) {
+        --size: 0.2vw;
+        --left-ini: 6vw;
+        --left-end: 5vw;
+        left: 3vw;
+        animation: snowfall 9s linear infinite;
+        animation-delay: -8s;
+    }
+    
+    .snow:nth-child(14) {
+        --size: 0.8vw;
+        --left-ini: -5vw;
+        --left-end: -2vw;
+        left: 49vw;
+        animation: snowfall 11s linear infinite;
+        animation-delay: -8s;
+    }
+    
+    .snow:nth-child(15) {
+        --size: 0.6vw;
+        --left-ini: 10vw;
+        --left-end: 4vw;
+        left: 77vw;
+        animation: snowfall 7s linear infinite;
+        animation-delay: -4s;
+    }
+    
+    .snow:nth-child(16) {
+        --size: 0.8vw;
+        --left-ini: -3vw;
+        --left-end: 1vw;
+        left: 86vw;
+        animation: snowfall 14s linear infinite;
+        animation-delay: -8s;
+    }
+    
+    .snow:nth-child(17) {
+        --size: 1vw;
+        --left-ini: 6vw;
+        --left-end: -7vw;
+        left: 18vw;
+        animation: snowfall 9s linear infinite;
+        animation-delay: -6s;
+    }
+    
+    .snow:nth-child(18) {
+        --size: 1vw;
+        --left-ini: -9vw;
+        --left-end: 4vw;
+        left: 64vw;
+        animation: snowfall 13s linear infinite;
+        animation-delay: -7s;
+    }
+    
+    .snow:nth-child(19) {
+        --size: 1vw;
+        --left-ini: 2vw;
+        --left-end: -7vw;
+        left: 52vw;
+        animation: snowfall 15s linear infinite;
+        animation-delay: -9s;
+    }
+    
+    .snow:nth-child(20) {
+        --size: 0.4vw;
+        --left-ini: 0vw;
+        --left-end: 8vw;
+        left: 5vw;
+        animation: snowfall 8s linear infinite;
+        animation-delay: -9s;
+    }
+    
+    .snow:nth-child(21) {
+        --size: 0.6vw;
+        --left-ini: -9vw;
+        --left-end: -2vw;
+        left: 10vw;
+        animation: snowfall 12s linear infinite;
+        animation-delay: -3s;
+    }
+    
+    .snow:nth-child(22) {
+        --size: 0.8vw;
+        --left-ini: -3vw;
+        --left-end: -8vw;
+        left: 54vw;
+        animation: snowfall 11s linear infinite;
+        animation-delay: -9s;
+    }
+    
+    .snow:nth-child(23) {
+        --size: 0.6vw;
+        --left-ini: -7vw;
+        --left-end: -8vw;
+        left: 20vw;
+        animation: snowfall 6s linear infinite;
+        animation-delay: -3s;
+    }
+    
+    .snow:nth-child(24) {
+        --size: 0.4vw;
+        --left-ini: 10vw;
+        --left-end: -4vw;
+        left: 68vw;
+        animation: snowfall 10s linear infinite;
+        animation-delay: -8s;
+    }
+    
+    .snow:nth-child(25) {
+        --size: 1vw;
+        --left-ini: 3vw;
+        --left-end: 5vw;
+        left: 90vw;
+        animation: snowfall 7s linear infinite;
+        animation-delay: -9s;
+    }
+    
+    .snow:nth-child(26) {
+        --size: 1vw;
+        --left-ini: -7vw;
+        --left-end: 5vw;
+        left: 71vw;
+        animation: snowfall 13s linear infinite;
+        animation-delay: -2s;
+    }
+    
+    .snow:nth-child(27) {
+        --size: 0.6vw;
+        --left-ini: 9vw;
+        --left-end: 4vw;
+        left: 2vw;
+        animation: snowfall 15s linear infinite;
+        animation-delay: -5s;
+    }
+    
+    .snow:nth-child(28) {
+        --size: 1vw;
+        --left-ini: -5vw;
+        --left-end: 3vw;
+        left: 23vw;
+        animation: snowfall 12s linear infinite;
+        animation-delay: -1s;
+    }
+    
+    .snow:nth-child(29) {
+        --size: 0.4vw;
+        --left-ini: -2vw;
+        --left-end: -1vw;
+        left: 39vw;
+        animation: snowfall 14s linear infinite;
+        animation-delay: -9s;
+    }
+    
+    .snow:nth-child(30) {
+        --size: 0.6vw;
+        --left-ini: -9vw;
+        --left-end: -5vw;
+        left: 76vw;
+        animation: snowfall 10s linear infinite;
+        animation-delay: -5s;
+    }
+    
+    .snow:nth-child(31) {
+        --size: 0.4vw;
+        --left-ini: -5vw;
+        --left-end: 3vw;
+        left: 14vw;
+        animation: snowfall 8s linear infinite;
+        animation-delay: -5s;
+    }
+    
+    .snow:nth-child(32) {
+        --size: 0.2vw;
+        --left-ini: 5vw;
+        --left-end: -1vw;
+        left: 86vw;
+        animation: snowfall 10s linear infinite;
+        animation-delay: -9s;
+    }
+    
+    .snow:nth-child(33) {
+        --size: 0.4vw;
+        --left-ini: -3vw;
+        --left-end: 10vw;
+        left: 66vw;
+        animation: snowfall 6s linear infinite;
+        animation-delay: -6s;
+    }
+    
+    .snow:nth-child(34) {
+        --size: 1vw;
+        --left-ini: -3vw;
+        --left-end: 6vw;
+        left: 75vw;
+        animation: snowfall 14s linear infinite;
+        animation-delay: -9s;
+    }
+    
+    .snow:nth-child(35) {
+        --size: 1vw;
+        --left-ini: -6vw;
+        --left-end: 7vw;
+        left: 22vw;
+        animation: snowfall 7s linear infinite;
+        animation-delay: -5s;
+    }
+    
+    .snow:nth-child(36) {
+        --size: 1vw;
+        --left-ini: 3vw;
+        --left-end: 4vw;
+        left: 10vw;
+        animation: snowfall 11s linear infinite;
+        animation-delay: -10s;
+    }
+    
+    .snow:nth-child(37) {
+        --size: 0.6vw;
+        --left-ini: 2vw;
+        --left-end: 10vw;
+        left: 95vw;
+        animation: snowfall 13s linear infinite;
+        animation-delay: -6s;
+    }
+    
+    .snow:nth-child(38) {
+        --size: 0.8vw;
+        --left-ini: 5vw;
+        --left-end: 8vw;
+        left: 34vw;
+        animation: snowfall 9s linear infinite;
+        animation-delay: -10s;
+    }
+    
+    .snow:nth-child(39) {
+        --size: 0.8vw;
+        --left-ini: 4vw;
+        --left-end: 0vw;
+        left: 80vw;
+        animation: snowfall 11s linear infinite;
+        animation-delay: -2s;
+    }
+    
+    .snow:nth-child(40) {
+        --size: 0.8vw;
+        --left-ini: 1vw;
+        --left-end: -7vw;
+        left: 45vw;
+        animation: snowfall 11s linear infinite;
+        animation-delay: -4s;
+    }
+    
+    .snow:nth-child(41) {
+        --size: 0.2vw;
+        --left-ini: 9vw;
+        --left-end: 10vw;
+        left: 82vw;
+        animation: snowfall 8s linear infinite;
+        animation-delay: -2s;
+    }
+    
+    .snow:nth-child(42) {
+        --size: 1vw;
+        --left-ini: 9vw;
+        --left-end: -9vw;
+        left: 22vw;
+        animation: snowfall 10s linear infinite;
+        animation-delay: -6s;
+    }
+    
+    .snow:nth-child(43) {
+        --size: 0.6vw;
+        --left-ini: 5vw;
+        --left-end: 8vw;
+        left: 66vw;
+        animation: snowfall 11s linear infinite;
+        animation-delay: -1s;
+    }
+    
+    .snow:nth-child(44) {
+        --size: 0.6vw;
+        --left-ini: -5vw;
+        --left-end: -2vw;
+        left: 75vw;
+        animation: snowfall 12s linear infinite;
+        animation-delay: -4s;
+    }
+    
+    .snow:nth-child(45) {
+        --size: 0.2vw;
+        --left-ini: 0vw;
+        --left-end: 3vw;
+        left: 2vw;
+        animation: snowfall 7s linear infinite;
+        animation-delay: -5s;
+    }
+    
+    .snow:nth-child(46) {
+        --size: 0.2vw;
+        --left-ini: 8vw;
+        --left-end: -3vw;
+        left: 94vw;
+        animation: snowfall 8s linear infinite;
+        animation-delay: -9s;
+    }
+    
+    .snow:nth-child(47) {
+        --size: 0.6vw;
+        --left-ini: -6vw;
+        --left-end: -9vw;
+        left: 95vw;
+        animation: snowfall 11s linear infinite;
+        animation-delay: -4s;
+    }
+    
+    .snow:nth-child(48) {
+        --size: 0.2vw;
+        --left-ini: -5vw;
+        --left-end: 6vw;
+        left: 34vw;
+        animation: snowfall 10s linear infinite;
+        animation-delay: -6s;
+    }
+    
+    .snow:nth-child(49) {
+        --size: 0.8vw;
+        --left-ini: 4vw;
+        --left-end: 8vw;
+        left: 22vw;
+        animation: snowfall 12s linear infinite;
+        animation-delay: -10s;
+    }
+    
+    .snow:nth-child(50) {
+        --size: 0.2vw;
+        --left-ini: -4vw;
+        --left-end: 4vw;
+        left: 100vw;
+        animation: snowfall 14s linear infinite;
+        animation-delay: -9s;
+    }
+    
